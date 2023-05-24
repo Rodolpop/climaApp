@@ -26,11 +26,12 @@
 }
 
 .condition {
-    font-size: 24px;
+    font-size: 25px;
+    margin: 5px;
 }
 
 .current {
     font-size: 38px;
     font-weight: bold;
-    
+
 }

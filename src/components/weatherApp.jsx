@@ -9,10 +9,17 @@ export default function WeatherApp(){
     const [weather, setWeather] = useState(null);
 
     useEffect(() => {
+        loadInfo();
+      }, []);
 
-    }, []);
+    useEffect(() => {
 
-    async function loadInfo( city = 'london'){
+        document.title = "Weather | " + weather?.location?.name ?? "";
+        
+
+    }, [weather]);
+
+    async function loadInfo( city = "Buenos Aires"){
 
         try{
             const request = await fetch( 
